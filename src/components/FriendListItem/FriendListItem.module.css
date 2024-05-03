@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.sub_title.is_online {
+  color: green;
+}
+
+.sub_title.is_offline {
+  color: red;
+}

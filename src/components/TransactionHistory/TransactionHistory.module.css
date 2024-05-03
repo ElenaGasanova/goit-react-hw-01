@@ -1,0 +1,21 @@
+.container {
+  width: 400px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.head {
+  border: 1px solid #000;
+  background-color: rgb(38, 35, 35);
+  text-align: center;
+  color: white;
+}
+
+.data {
+  padding: 5px;
+  width: 40px;
+}
+
+.row:nth-child(even) {
+  background-color: gray;
+}

@@ -1,11 +1,21 @@
 import FriendListItem from "../FriendListItem/FriendListItem";
 
-const FriendList = () => {
+import s from "./FriendList.module.css";
+
+const FriendList = ({ friends }) => {
   return (
-    <ul>
-      <li>
-        <FriendListItem />
-      </li>
+    <ul className={s.box}>
+      {friends.map((friend) => {
+        return (
+          <li className={s.item} key={friend.id}>
+            <FriendListItem
+              avatar={friend.avatar}
+              name={friend.name}
+              isOnline={friend.isOnline}
+            />
+          </li>
+        );
+      })}
     </ul>
   );
 };

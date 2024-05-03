@@ -1,3 +1,5 @@
+import s from "./Profile.module.css";
+
 const Profile = ({
   image,
   location,
@@ -6,28 +8,27 @@ const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <div>
-      <div>
-        <img src={image} alt="User avatar" />
-        <p>{name}</p>
-        <p>{tag}</p>
-        <p>{location}</p>
+    <div className={s.wrapper}>
+      <div className={s.profile}>
+        <img className={s.image} src={image} alt="User avatar" />
+        <h1 className={s.title}>{name}</h1>
+        <p className={s.intro_text}>@{tag}</p>
+        <p className={s.intro_text}>{location}</p>
       </div>
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{followers}</span>
+      <ul className={s.list}>
+        <li className={s.item}>
+          <span className={s.text}>Followers</span>
+          <span className={s.number}>{followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{views}</span>
+        <li className={s.item}>
+          <span className={s.text}>Views</span>
+          <span className={s.number}>{views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{likes}</span>
+        <li className={s.item}>
+          <span className={s.text}>Likes</span>
+          <span className={s.number}>{likes}</span>
         </li>
       </ul>
-      <hr />
     </div>
   );
 };
